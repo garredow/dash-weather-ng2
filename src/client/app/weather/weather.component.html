@@ -63,7 +63,7 @@
 	<app-card [label]="'Hourly'">
 		{{weatherData.hourly.summary}}<br>
 		<br>
-		<hourly-row *ngFor="let hour of weatherData.hourly.data | slice:0:12" [icon]="hour.icon" [summary]="hour.summary" [time]="hour.time"></hourly-row>
+		<hourly-row *ngFor="let hour of weatherData.hourly.data | slice:0:12; let i = index;" [data]="hour" [previous]="weatherData.hourly.data[i-1]"></hourly-row>
 	</app-card>
 
 	<app-card [label]="'Daily'">
