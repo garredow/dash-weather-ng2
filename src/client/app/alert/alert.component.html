@@ -7,12 +7,18 @@
 	.icon {
 		margin-right: 7px;
 	}
+	.label {
+		line-height: 24px;
+	}
+	.description {
+		overflow: hidden;
+	}
 </style>
 
 <img src="assets/warning.svg" class="icon">
 <div (click)="toggleDetail()">
-	<div>{{label}}</div>
-	<div [style.display]="showDetail == true ? 'block' : 'none'">
+	<div class="label">{{label}}</div>
+	<div class="description" [@showDetail]="showDetail ? 'true' : 'false'">
 		{{description}}
 	</div>
 </div>
