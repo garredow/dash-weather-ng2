@@ -9,7 +9,7 @@ import { WeatherService } from './index';
 	moduleId: module.id,
 	selector: 'app-weather',
 	templateUrl: 'weather.component.html',
-	directives: [CardComponent,AlertComponent, HourlyComponent, DailyComponent],
+	directives: [CardComponent, AlertComponent, HourlyComponent, DailyComponent],
 	providers: [WeatherService]
 })
 export class WeatherComponent implements OnInit {
