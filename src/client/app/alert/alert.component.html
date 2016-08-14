@@ -1,0 +1,18 @@
+<style>
+	:host {
+		display: flex;
+		margin-bottom: 10px;
+		align-items: flex-start;
+	}
+	.icon {
+		margin-right: 7px;
+	}
+</style>
+
+<img src="assets/warning.svg" class="icon">
+<div (click)="toggleDetail()">
+	<div>{{label}}</div>
+	<div [style.display]="showDetail == true ? 'block' : 'none'">
+		{{description}}
+	</div>
+</div>

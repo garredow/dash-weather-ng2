@@ -39,6 +39,8 @@
 		margin: 10px 0;
 		font-size: .9em;
 	}
+
+	
 </style>
 
 <div *ngIf="isDataAvailable">
@@ -47,6 +49,10 @@
 		<div><span class="max-temp">{{todayMax}}&deg;</span> <span class="min-temp">{{todayMin}}&deg;</span></div>
 		<div class="location">{{location}}</div>
 	</div>
+
+	<app-card *ngIf="weatherData.alerts" [label]="'Alerts'">
+		<alert-row *ngFor="let alert of weatherData.alerts" [label]="alert.title" [description]="alert.description"></alert-row>
+	</app-card>
 
 	<app-card [label]="'Forecast'">
 		<h3>This Hour</h3>

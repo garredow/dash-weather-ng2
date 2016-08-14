@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
+import { AlertComponent } from '../alert/alert.component';
 import { HourlyComponent } from '../hourly/hourly.component';
 import { DailyComponent } from '../daily/daily.component';
 import { WeatherService } from './index';
@@ -8,7 +9,7 @@ import { WeatherService } from './index';
 	moduleId: module.id,
 	selector: 'app-weather',
 	templateUrl: 'weather.component.html',
-	directives: [CardComponent, HourlyComponent, DailyComponent],
+	directives: [CardComponent,AlertComponent, HourlyComponent, DailyComponent],
 	providers: [WeatherService]
 })
 export class WeatherComponent implements OnInit {
