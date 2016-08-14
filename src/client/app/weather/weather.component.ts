@@ -42,7 +42,6 @@ export class WeatherComponent implements OnInit {
 		this._weatherService.getWeather(coords)
 			.then((res: any) => {
 				console.log('weather res: ', res);
-				res = res._body;
 				res.currently.temperature = Math.floor(res.currently.temperature);
 				this.weatherData = res;
 				this.todayMax = Math.floor(res.daily.data[0].temperatureMax);
