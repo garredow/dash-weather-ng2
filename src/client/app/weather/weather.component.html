@@ -1,0 +1,77 @@
+<style>
+	:host {
+		display: block;
+		padding: 10px;
+	}
+
+	.header {
+		/*height: 90vh;*/
+		height: calc(100vh - 60px);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	h3 {
+		font-weight: 400;
+    	margin: 0 0 0 0;
+		color: rgba(255,255,255,.9);
+	}
+
+	.temperature {
+		color: rgba(255,255,255,.9);
+		font-weight: 300;
+		font-size: 10em;
+	}
+
+	.max-temp {
+		color: #fcc;
+		font-size: 2em;
+	}
+
+	.min-temp {
+		color: #ccf;
+		font-size: 2em;
+	}
+
+	.last-updated {
+		text-align: center;
+		margin: 10px 0;
+		font-size: .9em;
+	}
+</style>
+
+<div *ngIf="isDataAvailable">
+	<div class="header">
+		<div class="temperature">{{weatherData.currently.temperature}}</div>
+		<div><span class="max-temp">{{todayMax}}&deg;</span> <span class="min-temp">{{todayMin}}&deg;</span></div>
+		<div class="location">{{location}}</div>
+	</div>
+
+	<app-card [label]="'Forecast'">
+		<h3>This Hour</h3>
+		{{weatherData.minutely.summary}}<br>
+		<br>
+		<h3>This Day</h3>
+		{{weatherData.hourly.summary}}<br>
+		<br>
+		<h3>This Week</h3>
+		{{weatherData.daily.summary}}
+	</app-card>
+
+	<app-card [label]="'Hourly'">
+		{{weatherData.hourly.summary}}<br>
+		<br>
+		<hourly-row *ngFor="let hour of weatherData.hourly.data | slice:0:12" [icon]="hour.icon" [summary]="hour.summary" [time]="hour.time"></hourly-row>
+	</app-card>
+
+	<app-card [label]="'Daily'">
+		{{weatherData.daily.summary}}<br>
+		<br>
+		<daily-row *ngFor="let day of weatherData.daily.data" [data]="day"></daily-row>
+	</app-card>
+
+	<div class="last-updated">
+		Last updated {{(weatherData.currently.time * 1000) | date:'MMM d, h:mm a'}}
+</div>

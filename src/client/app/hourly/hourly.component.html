@@ -1,0 +1,19 @@
+<style>
+	:host {
+		display: flex;
+	}
+
+	.icon {
+		height: 32px;
+		margin: 0 10px;
+	}
+
+	.summary,
+	.time {
+		line-height: 32px;
+	}
+</style>
+
+<div class="time">{{time | date:'HH'}}</div>
+<img src="{{iconUrl}}" class="icon">
+<div class="summary">{{summary}}</div>
