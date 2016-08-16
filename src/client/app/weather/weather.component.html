@@ -4,6 +4,11 @@
 		padding: 10px;
 	}
 
+	.container {
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
 	.main {
 		height: calc(100vh - 60px);
 		text-align: center;
@@ -41,7 +46,7 @@
 	}
 </style>
 
-<div *ngIf="isDataAvailable">
+<div class="container" *ngIf="isDataAvailable">
 	<div class="main">
 		<div class="temperature">{{weatherData.currently.temperature}}</div>
 		<div><span class="max-temp">{{todayMax}}&deg;</span> <span class="min-temp">{{todayMin}}&deg;</span></div>
