@@ -1,0 +1,27 @@
+:host {
+	display: flex;
+}
+
+.icon {
+	height: 32px;
+	margin: 0 10px;
+}
+
+.summary,
+.time,
+.temperature {
+	line-height: 32px;
+}
+
+.temperature {
+	color: rgba(255,255,255,.9);
+	margin-right: 10px;
+}
+
+.warmer {
+	color: #fcc;
+}
+
+.cooler {
+	color: #ccf;
+}

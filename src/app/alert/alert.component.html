@@ -1,0 +1,7 @@
+<!--<img src="../assets/warning.svg" class="icon">-->
+<div (click)="toggleDetail()">
+	<div class="label">{{label}}</div>
+	<div class="description" [@showDetail]="showDetail ? 'true' : 'false'">
+		{{description}}
+	</div>
+</div>

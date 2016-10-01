@@ -1,0 +1,17 @@
+:host {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.icon {
+	height: 48px;
+	margin-right: 10px;
+}
+
+.max-temp {
+	color: #fcc;
+}
+
+.min-temp {
+	color: #ccf;
+}

@@ -1,0 +1,9 @@
+<img src="{{iconUrl}}" class="icon">
+<div>
+	<div>
+		<span class="max-temp">{{data.temperatureMax}}&deg;</span>
+		<span class="min-temp">{{data.temperatureMin}}&deg;</span> 
+		{{data.time | date:'EEEE, MMMM d'}}
+	</div>
+	<div>{{data.summary}}</div>
+</div>

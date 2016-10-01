@@ -1,0 +1,4 @@
+<div class="time">{{data.time | date:'HH'}}</div>
+<img src="{{iconUrl}}" class="icon">
+<div class="temperature" [ngClass]="{warmer: difference == 'warmer', cooler: difference == 'cooler'}">{{data.temperature}}&deg;</div>
+<div class="summary">{{data.summary}}</div>

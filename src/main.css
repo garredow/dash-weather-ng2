@@ -1,0 +1,19 @@
+body { 
+	font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: rgba(255,255,255,.7);
+	padding: 0px;
+	margin: 0px;
+	background-color: #303030;
+	background-image: url('../assets/backgrounds/clear-day.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+/* TODO: Find a better way to manage these scrollbars */
+::-webkit-scrollbar {
+    width: 0px;
+}
