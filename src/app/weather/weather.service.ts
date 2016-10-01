@@ -11,7 +11,7 @@ export class WeatherService {
 
 	getWeather(coords: any) {
 		if (!this.useSampleData) {
-			let url: string = `https://api.forecast.io/forecast/${this._keys.forecastIO}/${coords.latitude},${coords.longitude}?callback=JSONP_CALLBACK`;
+			let url: string = `https://api.darksky.net/forecast/${this._keys.darksky}/${coords.latitude},${coords.longitude}?callback=JSONP_CALLBACK`;
 			return this._jsonp.get(url)
 				.map((res: any) => res._body)
 				.toPromise()
