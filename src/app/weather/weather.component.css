@@ -1,6 +1,9 @@
 :host {
 	display: block;
 	padding: 10px;
+	height: 100vh;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 
 .container {
