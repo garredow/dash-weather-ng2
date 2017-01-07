@@ -15,6 +15,34 @@ body {
 	height: 100vh;
 }
 
+/* Loading Screen */
+
+.loading-screen {
+	max-width: 750px;
+	margin: 0 auto;
+	height: calc(100vh - 60px);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.loading-screen .temperature {
+	color: rgba(255,255,255,.9);
+	font-weight: 300;
+	font-size: 10em;
+}
+
+.loading-screen .max-temp {
+	color: #fcc;
+	font-size: 2em;
+}
+
+.loading-screen .min-temp {
+	color: #ccf;
+	font-size: 2em;
+}
+
 /* TODO: Find a better way to manage these scrollbars */
 ::-webkit-scrollbar {
     width: 0px;
