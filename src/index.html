@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>DashWeather</title>
@@ -9,19 +10,33 @@
   <link rel="manifest" href="manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#303030">
   <link rel="apple-touch-icon" sizes="256x256" href="assets/icon-256.png">
   <link rel="apple-touch-icon" sizes="128x128" href="assets/icon-128.png">
   <link rel="icon" sizes="256x256" href="assets/icon-256.png">
   <link rel="icon" sizes="128x128" href="assets/icon-128.png">
   <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
 </head>
+
 <body>
   <app-root>
     <div class="loading-screen">
       <div class="temperature">0</div>
       <div><span class="max-temp">0&deg;</span> <span class="min-temp">0&deg;</span></div>
       <div class="location">Retrieving weather...</div>
-	  </div>
+    </div>
   </app-root>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+        console.log('Service Worker registered');
+      }).catch(function (err) {
+        console.log('Service Worker registration failed: ', err);
+      });
+    }
+
+  </script>
 </body>
+
 </html>
