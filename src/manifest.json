@@ -1,7 +1,11 @@
 {
-	"short_name": "Dash Weather",
+	"short_name": "Weather",
 	"name": "Dash Weather",
 	"description": "A simple weather app built with Angular 2 and TypeScript.",
+	"start_url": "index.html",
+	"display": "standalone",
+	"background_color": "#303030",
+	"theme_color": "#303030",
 	"icons": [
 		{
 			"src": "assets/icon-64.png",
@@ -18,7 +22,5 @@
 			"sizes": "256x256",
 			"type": "image/png"
 		}
-	],
-	"start_url": "index.html",
-	"display": "standalone"
+	]
 }
